@@ -4,7 +4,7 @@ This is a repository of KASDAD Studio, an app fully made by Codex for my persona
 
 ## KASDAD Studio
 
-An interactive study site for **CSGE603130 — Kecerdasan Artifisial dan Sains Data Dasar**. The initial release contains one complete introductory chapter based on the supplied lecturer PDF and structured Markdown transcript. The UI is in Indonesian to match the lecture.
+An interactive study site for **CSGE603130 — Kecerdasan Artifisial dan Sains Data Dasar**. It contains two introductory chapters based on their lecturer PDFs and structured Markdown transcripts. The UI is in Indonesian to match the lecture.
 
 ### Run locally
 
@@ -29,19 +29,19 @@ The site uses Next.js App Router, TypeScript, React Markdown, KaTeX, and plain C
 ### What is included
 
 - Course homepage and chapter overview
-- Eight lesson sections that combine related lecturer slides into a learning sequence
+- Eight sections on introductory AI and nine sections on introductory data science, each combining related lecturer slides into a learning sequence
 - Responsive chapter/section navigation and next/previous links
 - Markdown tables, code blocks, and LaTeX equations
-- Three interactive explorations: environment properties, agent architecture, and the classification dataset
+- Four interactive explorations: environment properties, agent architecture, a classification dataset, and a CRISP-DM case explorer
 - Self checks that reveal the answer on request
 - Direct PDF slide links and a full retained source transcript
 
 ### Content and provenance
 
-The original lecturer PDF is copied to [`public/sources/chapter-01.pdf`](public/sources/chapter-01.pdf) and is the authority for factual disagreements. The supplied structured Markdown is preserved at [`content/chapters/chapter-01/source-transcript.md`](content/chapters/chapter-01/source-transcript.md). The site reads its authored lesson Markdown from [`content/chapters/chapter-01/index.md`](content/chapters/chapter-01/index.md) and `sections/*.md`.
+The original lecturer PDFs are retained at [`public/sources/chapter-01.pdf`](public/sources/chapter-01.pdf) and [`public/sources/chapter-02.pdf`](public/sources/chapter-02.pdf); each is the authority for disagreements with its transcript. The supplied structured Markdown is preserved in each chapter's `source-transcript.md`. The site reads authored lessons from each chapter's `index.md` and `sections/*.md`.
 
-Chapter routing, navigation, slide mappings, and section metadata come from [`content/manifest.ts`](content/manifest.ts). See [`CONTENT.md`](CONTENT.md) for the exact Chapter 2 procedure and [`DESIGN.md`](DESIGN.md) for the visual approach.
+Chapter routing, navigation, slide mappings, and section metadata come from [`content/manifest.ts`](content/manifest.ts). See [`CONTENT.md`](CONTENT.md) for the content procedure and [`DESIGN.md`](DESIGN.md) for the visual approach.
 
 ### Validation performed
 
-`npm run lint`, `npm run typecheck`, and `npm run build` pass. Browser checks covered desktop and 390px mobile layouts, home and lesson routes, equation rendering, source links, quiz reveal, interactive demos, dataset filtering, progress persistence, and absence of page-level horizontal overflow. The key formula and example slides were visually checked against the PDF.
+Run `npm run lint`, `npm run typecheck`, and `npm run build` for each integration. Browser checks should cover desktop and mobile layouts, home and lesson routes, source links, quiz reveal, interactive demos, progress persistence, and page-level overflow. Check important claims against the relevant PDF.

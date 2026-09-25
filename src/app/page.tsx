@@ -34,7 +34,7 @@ export default function HomePage() {
                 <span className="hero-kicker__dot" /> CSGE603130 · RUANG BELAJAR
               </div>
               <h1>
-                Pelajari ide di balik <i>kecerdasan artifisial.</i>
+                Pelajari ide di balik <i>KA dan sains data.</i>
               </h1>
               <p>
                 Materi Kecerdasan Artifisial dan Sains Data Dasar, ditata ulang

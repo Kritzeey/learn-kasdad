@@ -4,30 +4,43 @@ import { useState } from "react";
 import { ArrowRight, Eye, EyeOff, Layers3, MousePointer2 } from "lucide-react";
 import type { DemoId } from "@content/manifest";
 import { computerRecords } from "@content/chapters/chapter-01/examples";
+import { CrispCaseExplorer } from "./crisp-case-explorer";
+
+const demoCopy: Record<DemoId, { title: string; description: string }> = {
+  environment: {
+    title: "Bandingkan lingkungan",
+    description:
+      "Pilih tugas untuk melihat klasifikasi yang tercetak pada slide 23.",
+  },
+  "agent-architecture": {
+    title: "Lihat apa yang ditambah tiap agen",
+    description:
+      "Pilih arsitektur untuk mengikuti informasi yang dipakai sebelum agen bertindak.",
+  },
+  dataset: {
+    title: "Baca data sebagai model",
+    description:
+      "Sembunyikan target untuk merasakan perbedaan atribut dan label.",
+  },
+  "crisp-case": {
+    title: "Telusuri enam tahap pada satu kasus",
+    description:
+      "Pilih tahap CRISP-DM untuk melihat bagaimana kuliah menerapkannya pada contoh pankreatitis akut.",
+  },
+};
 
 export function InteractiveDemo({ id }: { id: DemoId }) {
   return (
     <section className="demo-wrap" aria-labelledby="demo-title">
       <div className="section-heading-row">
         <span className="eyebrow">Eksplorasi interaktif</span>
-        <h2 id="demo-title">
-          {id === "environment"
-            ? "Bandingkan lingkungan"
-            : id === "agent-architecture"
-              ? "Lihat apa yang ditambah tiap agen"
-              : "Baca data sebagai model"}
-        </h2>
-        <p>
-          {id === "environment"
-            ? "Pilih tugas untuk melihat klasifikasi yang tercetak pada slide 23."
-            : id === "agent-architecture"
-              ? "Pilih arsitektur untuk mengikuti informasi yang dipakai sebelum agen bertindak."
-              : "Sembunyikan target untuk merasakan perbedaan atribut dan label."}
-        </p>
+        <h2 id="demo-title">{demoCopy[id].title}</h2>
+        <p>{demoCopy[id].description}</p>
       </div>
       {id === "environment" && <EnvironmentExplorer />}
       {id === "agent-architecture" && <ArchitectureExplorer />}
       {id === "dataset" && <DatasetExplorer />}
+      {id === "crisp-case" && <CrispCaseExplorer />}
     </section>
   );
 }

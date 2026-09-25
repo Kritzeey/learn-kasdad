@@ -6,4 +6,6 @@ The lesson shell keeps a desktop table of contents beside the text. At tablet/mo
 
 Interactive elements appear only where they expose a meaningful distinction in the lecture: the environment explorer switches among classifications already printed on slide 23; the agent explorer clarifies what each architecture adds; the dataset explorer separates attributes from labels using the exact records on slide 43. Each demo states when its diagram is simplified for learning.
 
+The Chapter 2 CRISP-DM case explorer uses the same compact control and card language. Selecting a stage reveals the corresponding pancreatitis example and its source slides. It is a study aid for comparing stages; it does not run a clinical model.
+
 The original lecturer slides are linked through a compact source disclosure instead of dominating every paragraph. The PDF remains available for audit, while the authored Markdown follows a coherent concept sequence rather than the slide layout.
